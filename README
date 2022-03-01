@@ -1,0 +1,23 @@
+Nume: Calin Teodor-Georgian
+                    
+
+    Am utilizat biblioteca parson pentru parsarea mesajelor de tip json.
+
+    In fisierul client.c se afla functia main, care contine algoritmul efectiv
+al clientului. Se verifica mereu comanda data si executa anumite comenzi, se
+primeste un raspuns de la server, se face afisarea, apoi se repeta acest ciclu.
+
+    Dupa primirea unui mesaj de la server, se verifica daca mesajul este de
+eroare, sau daca actiunea s-a efectuat cu succes, apoi se afiseaza un mesaj
+corespunzator.
+    
+    Doua lucruri esentiale in rezolvarea temei sunt cookie si token, care
+reprezinta niste "chei" in relatia user-server:
+    Atunci cand un user se logheaza cu succes la server, raspunsul contine un
+cookie, care va fi folosit atunci cand userul va trimite alte comenzi serverului.
+Practic, cookie-ul reprezinta dovada ca user-ul este logat. La delogare cookie-ul
+este sters.
+    Userul nu are dreptul sa acceseze biblioteca pana cand nu trimite comanda
+enter_library, la care serverul raspunde cu un mesaj care contine un token, care,
+asemanator cookie-ului, reprezinta dovada ca user-ul are acces la biblioteca.
+La delogare token-ul este sters.
